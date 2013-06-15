@@ -33,27 +33,27 @@ Usage
 First you will require a [Tesco Shopping account](https://secure.tesco.com/register/), [Developer account](https://secure.techfortesco.com/tescoapiweb/secretlogin.aspx) and to have read and agreed to the [Terms and Conditions](http://www.techfortesco.com/tescoapiweb/terms.htm) of the Tesco API.
 
 ```go
-    tesco = tesgo.New("<dev-key>", "<app key>")
-	if err := tesco.Login("<email>", "<password>"); err != nil {
-		fmt.Println(err)
-		return
-	}
+tesco = tesgo.New("<dev-key>", "<app-key>")
+if err := tesco.Login("<email>", "<password>"); err != nil {
+	fmt.Println(err)
+	return
+}
 
-	result, err := tesco.ProductSearch("milk", 1, false)
-	if err != nil {
-		fmt.Println(err)
-	} else {
-		for _, product := range result.Products {
-			fmt.Println(product.Name, product.Price)
-		}
+result, err := tesco.ProductSearch("milk", 1, false)
+if err != nil {
+	fmt.Println(err)
+} else {
+	for _, product := range result.Products {
+		fmt.Println(product.Name, product.Price)
 	}
+}
 ```
 Outputs:
 ```
-	Tesco Pure British Semi Skimmed Milk 2L 1.48
-	Tesco British Semi Skimmed Milk 2.272L 4Pints 1.29
-	Tesco British Semi Skimmed Milk 1.136L 2Pints 0.89
-	Tesco British Semi Skimmed Milk 3.480L 6Pints 1.89
+Tesco Pure British Semi Skimmed Milk 2L 1.48
+Tesco British Semi Skimmed Milk 2.272L 4Pints 1.29
+Tesco British Semi Skimmed Milk 1.136L 2Pints 0.89
+Tesco British Semi Skimmed Milk 3.480L 6Pints 1.89
 ...
 ```
 
@@ -62,7 +62,7 @@ License
 
 TesGo is distributed under the the BSD 2-Clause License:
 
-> Copyright (C) 2013, Jordon Smith <jrd@mockra.net>
+> Copyright (C) 2013, Jordon Smith <<jrd@mockra.net>>
 > All rights reserved.
 >
 > Redistribution and use in source and binary forms, with or without
